@@ -1,5 +1,5 @@
 package clinicaveterinaria;
-
+import clinicaveterinaria.interfaces.*;
 import clinicaveterinaria.model.*;
 import clinicaveterinaria.repository.*;
 import clinicaveterinaria.service.*;
@@ -51,9 +51,25 @@ public class Main {
         veterinario.diagnosticar(citaDesdeModelo, "Ejemplo de SRP violado desde el modelo.");
         System.out.println(veterinario.crearReporte(citaDesdeModelo));
 
-        Animal pez = new Pez(3, "Nemo");
-        pez.nadar();
-        System.out.println("El pez heredó caminar() y volar(), aunque no debe usarlos.");
-        System.out.println("Tratamiento OCP violado pero funcional: " + tratamiento.obtenerIndicaciones());
+        Pez P = new Pez(3, "Nemo");
+        P.nadar();
+
+
+        Perro P2 = new Perro(1, "Noah");
+        P2.nadar();
+        P2.Camina();
+
+        Gato G1 = new Gato(2, "Hamburguesa");
+       
+        G1.Camina();
+
+        
+        Pajaro P3 = new Pajaro(4, "Dori");
+       
+        P3.volar();
+
+
+
+
     }
 }
