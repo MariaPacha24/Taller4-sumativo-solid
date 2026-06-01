@@ -46,7 +46,6 @@ src/main/java/clinicaveterinaria/
 
 -Ariana Moreira: refactorizar SRP.
 Checklist de validación:
-
 | Criterio | Sí/No |
 | --- | --- |
 | El proyecto compila |No |
@@ -55,21 +54,14 @@ Checklist de validación:
 | Los nombres de servicios son claros |Si |
 
 Preguntas de discusión:
-
 - ¿Cuántas razones para cambiar tenía `Veterinario` antes del refactoring?
 Tenia cuatro y eran razones a comabiar porque no estaba conservando solo los datos de veterinario sino que tambien contenia metodos que no le pertenecian como los eran reservar citas y demas metodos, es decir estba haciendo más de una cosa. 
 - ¿Qué ganamos al separar modelo y servicios?
 Conocer donde estan las clases que son de modelado, es decir, que no conlleven la logica del negocio mientras que en servicios ya contenemos las acciones o implementos que podemos realizar en la clinica veterinaria. En conclusion, saber de manera mas simple donde se encuentra cada cosa y lo que hace
 - ¿Qué clase debería cambiar si mañana cambia el formato del reporte?
 Con reporte se refiere al modelo? lo que se presenta, si es asi, a futuro solo se cambiaria la clase veterinario ya que tiene en cuanta los datos de el y lo que se presenta, mientras que mis clases pertenecientes a service solo conllevan la logica no deberia haber razon para tocarlas o cambiarlas
-- Integrante 2: refactorizar OCP.
-- Integrante 3: refactorizar LSP.
-- Integrante 4: refactorizar ISP y DIP.
-- Integrante 4: refactorizar ISP y DIP.
 
-Lee `guia.md` para instrucciones, checklists y preguntas de discusión.
-
-## REFACTORIZACION OSP INTEGRANTE 2
+## REFACTORIZACION OSP Elkin Salazar
 Checklist de validación:
 
 | Criterio | Sí/No |
@@ -88,7 +80,7 @@ Lo que pasaria es que se deberia crear su respectiva clase de odontologia, donde
 - ¿Cuándo una interfaz ayuda a extender el sistema?
 Al utilizar interfaz lo que nos permite construir un software como si fuera una estructura general, por decir al resto del programa que operaciones estan disponibles pero no le permito como se hace.
 
----------------NTEGRANT 3 Maria Jose PACHA ------- 
+---------------INTEGRANTE 3 Maria Jose PACHA ------- 
 VIOLACIONES LSP
 sE BUSCO que ningun animal implemente acciones que no necesita o realiza , para asi evitar lanzar excepciones innecesearias y que exista una mala implementacion
 Esto se realizo quitando los datos innecesarios en la class Animal como la implementacion de IAnimal una interface que englobaba , las accione volar, nadar , caminar. A Estas mismas acciones se crearon interfaces individuales para que asi cada animal pueda implementar la que necesite y asi mismo para futuros animales diferentes a los que ya se tienen 
