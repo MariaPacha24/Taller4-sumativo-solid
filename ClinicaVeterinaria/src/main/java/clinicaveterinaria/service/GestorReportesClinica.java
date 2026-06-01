@@ -4,7 +4,7 @@ import clinicaveterinaria.repository.BaseDatos;
 
 
 public class GestorReportesClinica {
-    private final BaseDatos baseDatos = new BaseDatos();
+    private final IBaseDatos baseDatos = new IBaseDatos();
 
     public void imprimirResumenOperaciones() {
         System.out.println("Resumen interno: " + baseDatos.getAuditoria());
