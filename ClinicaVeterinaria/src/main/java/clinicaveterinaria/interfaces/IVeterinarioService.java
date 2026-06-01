@@ -10,4 +10,6 @@ public interface IVeterinarioService {
     Cita reservarCita(Mascota mascota, Veterinario veterinario, LocalDate fecha);
 
     void diagnosticar(Cita cita, String diagnostico);
+
+    
 }

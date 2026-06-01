@@ -179,6 +179,7 @@ Principio: Liskov Substitution Principle. Una subclase debe poder reemplazar a s
 
 Problema principal:
 
+
 - `Animal` promete `volar()`, `nadar()` y `caminar()`.
 - `Perro`, `Gato`, `Pajaro` y `Pez` heredan métodos que no siempre pueden cumplir.
 - Algunas subclases lanzan `UnsupportedOperationException`.

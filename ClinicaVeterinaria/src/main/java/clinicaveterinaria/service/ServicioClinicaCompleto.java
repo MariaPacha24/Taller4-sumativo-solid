@@ -11,7 +11,7 @@ import clinicaveterinaria.repository.BaseDatos;
 import java.util.List;
 
 
-public class ServicioClinicaCompleto implements IServicioClinica {
+public class ServicioClinicaCompleto implements IMascotaService, ICitaService, IReporteService,IFacturaService,IVetacservice,ITratamientoService{
     private final MascotaService mascotaService;
     private final VeterinarioCrudService veterinarioService;
     private final CitaService citaService;
