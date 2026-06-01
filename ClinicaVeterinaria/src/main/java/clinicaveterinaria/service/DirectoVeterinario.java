@@ -12,7 +12,7 @@ import java.time.LocalDate;
 public class DirectoVeterinario implements IVeterinarioService {
     @Override
     public Cita reservarCita(Mascota mascota, Veterinario veterinario, LocalDate fecha) {
-        veterinario.setDisponible(false);
+        //veterinario.setDisponible(false);
         return new Cita(999, mascota, veterinario, fecha, "Pendiente", EstadoCita.PROGRAMADA);
     }
 
