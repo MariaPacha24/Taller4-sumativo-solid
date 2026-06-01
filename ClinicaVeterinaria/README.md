@@ -52,9 +52,11 @@ src/main/java/clinicaveterinaria/
 Lee `guia.md` para instrucciones, checklists y preguntas de discusión.
 
 
+
+
+
 ## REFACTORIZACION OSP INTEGRANTE 2
 Checklist de validación:
-
 
 | Criterio | Sí/No |
 | --- | --- |
