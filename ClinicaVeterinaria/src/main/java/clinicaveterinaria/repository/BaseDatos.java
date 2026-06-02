@@ -1,17 +1,18 @@
 package clinicaveterinaria.repository;
 
-import clinicaveterinaria.interfaces.IBaseDatos;
-import clinicaveterinaria.model.Cita;
-import clinicaveterinaria.model.Factura;
-import clinicaveterinaria.model.Mascota;
-import clinicaveterinaria.model.Tratamiento;
-import clinicaveterinaria.model.Veterinario;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import clinicaveterinaria.interfaces.IBaseDatos;
+import clinicaveterinaria.interfaces.ITratamiento;
+import clinicaveterinaria.model.Cita;
+import clinicaveterinaria.model.Factura;
+import clinicaveterinaria.model.Mascota;
+import clinicaveterinaria.model.Tratamiento;
+import clinicaveterinaria.model.Veterinario;
 
 
 public class BaseDatos implements IBaseDatos {
@@ -21,6 +22,7 @@ public class BaseDatos implements IBaseDatos {
     private final List<Tratamiento> tratamientos = new ArrayList<>();
     private final List<Factura> facturas = new ArrayList<>();
     private final Map<String, Integer> auditoria = new HashMap<>();
+    private final List<ITratamiento> Itratamientos = new ArrayList<>();
 
     @Override
     public List<Mascota> getMascotas() {
@@ -41,6 +43,12 @@ public class BaseDatos implements IBaseDatos {
     public List<Tratamiento> getTratamientos() {
         return tratamientos;
     }
+
+
+    public List<ITratamiento> getITratamientos() {
+        return Itratamientos;
+    }
+
 
     @Override
     public List<Factura> getFacturas() {

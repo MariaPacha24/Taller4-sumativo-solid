@@ -13,26 +13,7 @@ public class Veterinario {
         this.id = id;
         this.nombre = nombre;
         this.especialidad = especialidad;
-        this.disponible = disponible;
-    }
-
-    public Cita reservarCita(int citaId, Mascota mascota, LocalDate fecha) {
-        disponible = false;
-        return new Cita(citaId, mascota, this, fecha, "Pendiente", EstadoCita.PROGRAMADA);
-    }
-
-    public void diagnosticar(Cita cita, String diagnostico) {
-        cita.setDiagnostico(diagnostico);
-        cita.setEstado(EstadoCita.ATENDIDA);
-    }
-
-    public Factura generarFactura(int facturaId, Cita cita, double monto, LocalDate fecha) {
-        return new Factura(facturaId, cita, monto, fecha, false);
-    }
-
-    public String crearReporte(Cita cita) {
-        return "Reporte: " + nombre + " atendio a " +
-                cita.getMascota().getNombre() + " con diagnostico " + cita.getDiagnostico();
+        this.disponible= disponible;
     }
 
     public int getId() {
@@ -59,13 +40,12 @@ public class Veterinario {
         this.especialidad = especialidad;
     }
 
-    public boolean isDisponible() {
-        return disponible;
-    }
-
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
     }
+    public boolean isDisponible() {
+            return disponible;
+        }
 
     @Override
     public boolean equals(Object o) {
