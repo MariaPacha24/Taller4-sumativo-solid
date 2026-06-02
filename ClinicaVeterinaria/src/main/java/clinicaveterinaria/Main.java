@@ -9,7 +9,7 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        BaseDatos IbaseDatos = new IbaseDatos();
+        IbaseDatos IbaseDatos = new IbaseDatos();
         MascotaService mascotaService = new MascotaService(baseDatos);
         VeterinarioCrudService veterinarioCrudService = new VeterinarioCrudService(baseDatos);
         ReservaService reservaService = new ReservaService(baseDatos);
